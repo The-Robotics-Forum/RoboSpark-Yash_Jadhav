@@ -1,0 +1,60 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class Op{
+	public:
+	string str;
+	int size;
+	Op(string a)
+	{
+		str=a;
+	}
+	void operator +(string a)
+	{
+		str+=a;
+		cout<<str;
+	}
+	
+	void operator *(int s)
+	{
+		int  i;
+		for( i=0;i<s;i++){
+		
+		cout<<str;
+		cout<<endl;
+	}}
+	istream& operator >>(istream& in)
+	{
+	cout<<"Enter string"<<endl;
+	in>>str;
+	return in;
+		
+	}
+ 	ostream& operator <<(ostream& out)
+	{
+		cout<<"printing using operator overloaded operator\n";
+		out<<str;
+	}
+	
+		
+};
+int main()
+{
+	Op a("Suyash");
+	string s;
+	cout<<"Enter String to append using >> operator"<<endl;
+	cin>>s;
+	cout<<"Performing Addition of string\n";
+	a +s;
+	cout<<endl;
+	cout<<"Multiplying a string two times\n";
+	a*2;
+	cout<<"Printing using overloading << operator"<<endl;
+	cout<<a.str;
+	
+	
+}
+
+
+
+
