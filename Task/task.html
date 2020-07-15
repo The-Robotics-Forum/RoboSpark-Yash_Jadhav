@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--charset is telling browser that we are using UTF-8 encoding,
+        it is like ASCII but ASCII has limited characterset which is of no use in real world-->
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!--CDN link for fontawesome icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--link to external css file-->
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <!--login form starts-->
+    <form method="POST" action="task.php" class="login-box">
+        <h1>Check Student Details</h1>
+        <!--username area-->
+        <div class="form_input">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" name="username" placeholder="Enter Username" required/>
+        </div>
+        <!--password Area-->
+        <div class="form_input">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="text" name="user_id" placeholder="Enter Id" required/>
+        </div>
+        <input type="submit" name="submit" value="Check" class="submit-btn" /> 
+    </form>
+</body>
+</html>
+
