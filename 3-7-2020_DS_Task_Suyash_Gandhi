@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct tree
+{
+	int data;
+	struct tree *left,*right;
+};
+struct tree * new_node(int d)
+{
+	struct tree * temp=(struct tree *)malloc (sizeof(struct tree));
+	temp->data=d;
+	temp->left=temp->right=NULL;
+	return(temp);
+}
+void post_order(struct tree* t)
+{
+	if(t==NULL){
+	
+	return;
+}
+	post_order(t->left);
+	post_order(t->right);
+	printf("%d\n",t->data);
+}
+int main()
+{
+	struct tree *root=new_node(10);
+	root->left=new_node(5);
+	root->right=new_node(15);
+	root->left->left=new_node(2);
+	
+	root->left->right=new_node(8);
+	root->right->right=new_node(25);
+
+	post_order(root);
+	
+}

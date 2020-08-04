@@ -1,0 +1,104 @@
+#include<iostream>
+using namespace std;
+class personal_data
+{
+	protected:
+		string full_name;
+		string address;
+		string mobile_no;
+		int dob;
+	public:
+	personal_data()
+	{
+		full_name="SUYASH_GANDHI";
+		address="Balaji_Society_pune";
+		mobile_no="8379911511";
+		dob=14;
+	}
+	takeinput()
+	{
+		cout<<"Enter Full_name"<<endl;
+		cin>>full_name;
+		cout<<"Enter the Address"<<endl;
+		cin>>address;
+		cout<<"Enter mobile no "<<endl;
+		cin>>mobile_no;
+		cout<<"Enter Date of Birth"<<endl;
+		cin>>dob;
+	}
+};
+class professional_data{
+protected:	string name_of_org;
+	string job_profile;
+	int no_of_projects;
+	public:professional_data()
+	{
+		name_of_org="ABC";
+		job_profile="Manager";
+		no_of_projects=7;
+	}
+	take_p_input()
+	{
+		cout<<"Enter name of Organization"<<endl;
+		cin>>name_of_org;
+		cout<<"Enter Job Profile"<<endl;
+		cin>>job_profile;
+		cout<<"Enter no of projects "<<endl;
+		cin>>no_of_projects;
+		
+	}
+	
+};
+class acedemic_data{
+	protected:
+	int yop;
+	float cgpa;
+	string college_name;
+	string branch;
+public:	acedemic_data()
+	{
+		yop=2020;
+		cgpa=10.0;
+		college_name="VIT";
+		branch="Computer_Science";
+	}
+	take_a_input()
+	{
+		cout<<"Year of passing"<<endl;
+		cin>>yop;
+		cout<<"Enter the CGPA"<<endl;
+		cin>>cgpa;
+		cout<<"Enter College name "<<endl;
+		cin>>college_name;
+		cout<<"Enter Branch"<<endl;
+		cin>>branch;
+	}
+};
+class biodata :public acedemic_data,public personal_data,public professional_data
+{
+	public:display()
+	{
+		cout<<"Personal Data :"<<endl;
+		cout<<"Name :"<<full_name<<endl;
+		cout<<"Mobile No:"<<mobile_no<<endl;
+		cout<<"Date of Birth :"<<dob<<endl<<endl;
+		cout<<"Professional Data :"<<endl;
+		cout<<"Name of Oraganization :"<<name_of_org<<endl;
+		cout<<"Job Profile:"<<job_profile<<endl;
+		cout<<"No of projects :"<<no_of_projects<<endl<<endl;
+		cout<<"Professional Data :"<<endl;
+		cout<<"Year of passing:"<<yop<<endl;
+		cout<<"CGPA :"<<cgpa<<endl;
+		cout<<"College Name :"<<college_name<<endl;
+		cout<<"Branch :"<<branch<<endl<<endl;
+			
+	}
+	
+};
+
+
+int main()
+{
+   biodata b;
+   b.display();
+}
